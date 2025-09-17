@@ -1,0 +1,11 @@
+[Unit]
+Description=Odoo Cloudflared Tunnel 8069
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/cloudflared tunnel --url http://localhost:8069
+Restart=always
+User=stahieu12gb
+
+[Install]
+WantedBy=multi-user.target
